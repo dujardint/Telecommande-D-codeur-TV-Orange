@@ -48,23 +48,34 @@ public class MonController {
 	Button CHMOINS;
 	@FXML
 	Button INFO;
+
+	@FXML
+	Button TF1;
+	@FXML
+	Button FRANCEDEUX;
+	@FXML
+	Button TMC;
+	@FXML
+	Button BFM;
+
 	@FXML
 	WebView webView;
 	@FXML
 	WebEngine engine;
 
 
-	public void initialize() {
+	public void initialize() throws InterruptedException {
 		System.out.println("demarrage appli telecommande");
 		engine=webView.getEngine();
 		loadPage();
 	}
 
-	private void loadPage() {
+	private void loadPage() throws InterruptedException {
+		Thread.sleep(500);
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=10");
-		
+
 	}
-	
+
 	/////////////////////////
 	////////1ERE RANGEE//////
 	/////////////////////////
@@ -77,24 +88,31 @@ public class MonController {
 
 	}
 
-	public void pressedButtonVolPlus(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonVolPlus(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("volplus");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=115&mode=0");
+		loadPage();
 	}
 
-	public void pressedButtonVolMoins(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonVolMoins(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("volmoins");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=115&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonMute(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonMute(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("mute");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=113&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonRecule(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonRecule(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("recule");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=168&mode=0");
+		loadPage();
+
 	}
 
 	/////////////////////////
@@ -102,9 +120,11 @@ public class MonController {
 	/////////////////////////
 
 
-	public void pressedButtonLeft(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonLeft(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("left");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=105&mode=0");
+		loadPage();
+
 	}
 
 	/////////////////////////
@@ -112,34 +132,46 @@ public class MonController {
 	/////////////////////////
 
 
-	public void pressedButtonMenu(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonMenu(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("menu");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=139&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonUp(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonUp(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("up");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=103&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonOk(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonOk(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("ok");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=352&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonDown(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonDown(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("down");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=108&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonRec(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonRec(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("rec");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=167&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonPlay(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonPlay(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("play");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=164&mode=0");
+		loadPage();
+
 	}
 
 
@@ -148,9 +180,11 @@ public class MonController {
 	/////////////////////////
 
 
-	public void pressedButtonRight(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonRight(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("right");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=106&mode=0");
+		loadPage();
+
 	}
 
 	/////////////////////////
@@ -158,32 +192,77 @@ public class MonController {
 	/////////////////////////
 
 
-	public void pressedButtonPower(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonPower(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("power");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=116&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonCHPLUS(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonCHPLUS(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("chplus");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=402&mode=0");
+		loadPage();
+
 	}
 
-	public void pressedButtonCHMOINS(ActionEvent event) throws IOException, URISyntaxException{
+	public void pressedButtonCHMOINS(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("chmoins");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=403&mode=0");
+		loadPage();
+
 	}
-	
-	
-	public void pressedButtonINFO(ActionEvent event) throws IOException, URISyntaxException{
+
+
+	public void pressedButtonINFO(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("info html");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=10");
-	}
-	
+		loadPage();
 
-	public void pressedButtonAVANCE(ActionEvent event) throws IOException, URISyntaxException{
+	}
+
+
+	public void pressedButtonAVANCE(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
 		System.out.println("avance");
 		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=01&key=159&mode=0");
+		loadPage();
+
 	}
+
+
+	/////////////////////////
+	////////CHAINE//////
+	/////////////////////////
+
+
+	public void pressedButtonTF1(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
+		System.out.println("TF1");
+		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=09&epg_id=*******192&uui=1");
+		loadPage();
+
+	}
+
+	public void pressedButtonFRANCEDEUX(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
+		System.out.println("FRANCE2");
+		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=09&epg_id=*********4&uui=1");
+		loadPage();
+
+	}
+
+	public void pressedButtonTMC(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
+		System.out.println("TMC");
+		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=09&epg_id=*******195&uui=1");
+		loadPage();
+
+	}
+
+
+	public void pressedButtonBFMTV(ActionEvent event) throws IOException, URISyntaxException, InterruptedException{
+		System.out.println("BFMTV");
+		engine.load("http://192.168.1.31:8080/remoteControl/cmd?operation=09&epg_id=*******481&uui=1");
+		loadPage();
+	}
+
 
 }
 

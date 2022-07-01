@@ -9,7 +9,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="decodeur.MonController">
    <center>
-      <GridPane gridLinesVisible="true" prefHeight="249.0" prefWidth="296.0" style="-fx-background-color: #FE9B46;" BorderPane.alignment="TOP_LEFT">
+      <GridPane fx:id="FRA2" gridLinesVisible="true" prefHeight="249.0" prefWidth="296.0" style="-fx-background-color: #FE9B46;" BorderPane.alignment="TOP_LEFT">
         <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="68.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="64.0" />
@@ -44,6 +44,10 @@
             <Button fx:id="POWER" mnemonicParsing="false" onAction="#pressedButtonPower" text="POWER" GridPane.columnIndex="4" />
             <Button fx:id="MENU" mnemonicParsing="false" onAction="#pressedButtonMenu" text="MENU" GridPane.columnIndex="2" />
             <Button fx:id="INFO" mnemonicParsing="false" onAction="#pressedButtonINFO" text="INFO" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="TF1" mnemonicParsing="false" onAction="#pressedButtonTF1" text="TF1" GridPane.rowIndex="1" />
+            <Button fx:id="TMC" mnemonicParsing="false" onAction="#pressedButtonTMC" text="TMC" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="BFMTV" mnemonicParsing="false" onAction="#pressedButtonBFMTV" text="BFMTV" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="FRANCEDEUX" mnemonicParsing="false" onAction="#pressedButtonFRANCEDEUX" text="FRA2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </center>
