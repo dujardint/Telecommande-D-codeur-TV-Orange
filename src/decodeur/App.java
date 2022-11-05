@@ -11,7 +11,11 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class Appli extends Application{
+public class App extends Application{
+	
+	/*
+	 * arguments : --module-path C:\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml,javafx.web
+	 */
 
 	@Override
     public void start(Stage stage) throws IOException {
@@ -26,13 +30,13 @@ public class Appli extends Application{
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Télécommande Décodeur Orange TV 192.168.1.31");
+        stage.setTitle("Télécommande Décodeur Orange TV IP");
         stage.show();
 }
 
 	
 
 	public static void main(String[] args) {
-		Application.launch(args);
+		launch(args);
 	}
 }
