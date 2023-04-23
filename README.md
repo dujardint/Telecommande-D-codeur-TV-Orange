@@ -13,3 +13,5 @@ par défaut le dernier octet est .34 (ce que j'ai chez moi 😉) )
 * A gauche, nous avons les bouttons de commandes + quelques accès rapide pour les chaines (tf1, france 2, tmc et bfmtv)
 * A droite, nous avons la page html de status du décodeur
 * tout en haut, une barre affichant l'adresse du décodeur et la possibilité de changer le dernier octet avec un boutton de validation, si l'entrée est correct, alors l'affichage de l'adresse du décodeur change
+
+![photo](/app.jpg)
